@@ -1,0 +1,159 @@
+﻿# #############################################################################
+#   @file
+#
+#   @brief clang-formatter-script for C/C++
+#
+#   Supported clang-format version is 11. See
+#   http://clang.llvm.org/docs/ClangFormatStyleOptions.html
+#   for style options and documentation.
+#
+#   @author hellfisch
+#   @date 2023-06-30
+#
+#   @note
+#   - partiacl skipping code formatting
+#       /* clang-format off */
+#       <code>
+#       /* clang-format on */
+#   - Online Tests: https://zed0.co.uk/clang-format-configurator/
+#
+#   @version 0000.0001 / 2023.06.30 / hellfisch
+#
+# #############################################################################
+
+---
+
+# C-Language
+Language:       Cpp
+
+# Default base style
+#BasedOnStyle:   LLVM
+#BasedOnStyle:   Google
+#BasedOnStyle:   Chromium
+#BasedOnStyle:   Mozilla
+BasedOnStyle:   WebKit
+#BasedOnStyle:   Microsoft
+#BasedOnStyle:   GNU
+
+# C-Standard version
+Standard:       Auto # Cpp11
+
+# enable for debugging only
+DisableFormat:  false
+
+AccessModifierOffset: 4
+
+### ALIGN
+AlignAfterOpenBracket:          Align
+AlignConsecutiveAssignments:    true
+AlignConsecutiveDeclarations:   true
+AlignConsecutiveMacros:         true
+AlignEscapedNewlines:           Left
+AlignOperands:                  true
+AlignTrailingComments:          true
+
+### ALLOW
+AllowAllArgumentsOnNextLine:                false
+AllowAllParametersOfDeclarationOnNextLine:  false
+AllowShortBlocksOnASingleLine:              true
+AllowShortCaseLabelsOnASingleLine:          false
+AllowShortFunctionsOnASingleLine:           None
+#AllowShortIfStatementsOnASingleLine:        WithoutElse # Never
+AllowShortIfStatementsOnASingleLine:        false
+AllowShortLoopsOnASingleLine:               false
+
+### ALWAYS
+AlwaysBreakAfterReturnType:         None
+AlwaysBreakBeforeMultilineStrings:  true # false
+
+### BIN_PACK
+BinPackArguments:   false
+BinPackParameters:  false
+
+### BRACE_WRAPPING
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel:           true
+  AfterClass:               true
+  AfterControlStatement:    true
+  AfterEnum:                true
+  AfterExternBlock:         true
+  AfterFunction:            true
+  AfterNamespace:           true
+  AfterObjCDeclaration:     true
+  AfterStruct:              true
+  AfterUnion:               true
+  BeforeCatch:              true
+  BeforeElse:               true
+#  BeforeWhile:              true # should be avalable in v11
+  IndentBraces:             false
+  SplitEmptyFunction:       true
+  SplitEmptyRecord:         true
+  SplitEmptyNamespace:      true
+
+BreakBeforeBinaryOperators: None
+BreakStringLiterals:        false
+
+### COLUMN_LIMIT
+ColumnLimit:     0 # for source files
+#ColumnLimit:     240 # for header files
+
+ContinuationIndentWidth:            4
+Cpp11BracedListStyle:               true
+DerivePointerAlignment:             false
+ExperimentalAutoDetectBinPacking:   false
+FixNamespaceComments:               true
+IncludeBlocks:                      Preserve
+
+### INDENT
+IndentCaseBlocks:           false
+IndentCaseLabels:           true
+IndentPPDirectives:         AfterHash
+IndentWidth:                4
+IndentWrappedFunctionNames: true
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+MaxEmptyLinesToKeep:    1
+NamespaceIndentation:   All
+
+### PENALTIES
+# penalties are no considered as relative or absolute offsets! They represant
+# a special weightness for an intern priority calculation.
+# The more/higher the value the lower/unnecessary the option. So, the higher
+# the value the unlikely the line would be wrapped.
+PenaltyBreakAssignment:                 400
+PenaltyBreakBeforeFirstCallParameter:   300
+PenaltyBreakComment:                    350
+PenaltyBreakFirstLessLess:              0
+PenaltyBreakString:                     1000
+#PenaltyBreakTemplateDeclaration:        1
+PenaltyExcessCharacter:                 10
+PenaltyReturnTypeOnItsOwnLine:          5000
+
+PointerAlignment:   Left #Right
+ReflowComments:     false
+SortIncludes:       false
+
+### SPACES
+SpaceAfterCStyleCast:               true
+SpaceAfterLogicalNot:               false
+SpaceAfterTemplateKeyword:          false
+SpaceBeforeAssignmentOperators:     true
+SpaceBeforeCpp11BracedList:         true
+SpaceBeforeCtorInitializerColon:    true
+SpaceBeforeInheritanceColon:        true
+SpaceBeforeParens:                  ControlStatements
+SpaceBeforeRangeBasedForLoopColon:  true
+SpaceBeforeSquareBrackets:          false
+SpaceInEmptyParentheses:            false
+SpacesBeforeTrailingComments:       1
+SpacesInAngles:                     false
+SpacesInCStyleCastParentheses:      false
+SpacesInContainerLiterals:          false
+SpacesInParentheses:                false
+SpacesInSquareBrackets:             false
+
+### TABS
+TabWidth:   4
+UseTab:     Never

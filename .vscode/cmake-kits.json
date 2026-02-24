@@ -1,0 +1,7 @@
+[
+    {
+        "name": "GCC 9",
+        "description": "System GCC",
+        //"toolchainFile": "${workspaceFolder}/cmakefiles/project_toolchain.cmake"
+    }
+]

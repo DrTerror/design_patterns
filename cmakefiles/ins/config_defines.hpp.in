@@ -1,0 +1,30 @@
+#pragma once
+
+/* CMake-generated config: do not edit directly */
+
+/* from cmake variables */
+#cmakedefine TARGET_NAME "@TARGET_NAME@" // app name
+
+/* from cmake options */
+#cmakedefine01 ENABLE_TARGET_BEHAVIORAL
+#   cmakedefine01 ENABLE_FEATURE_CHAIN_OF_RESPONSIBILITY
+#   cmakedefine01 ENABLE_FEATURE_COMMAND
+#   cmakedefine01 ENABLE_FEATURE_INTERPRETER
+#   cmakedefine01 ENABLE_FEATURE_ITERATOR
+#   cmakedefine01 ENABLE_FEATURE_MEDIATOR
+#   cmakedefine01 ENABLE_FEATURE_MEMENTO
+#   cmakedefine01 ENABLE_FEATURE_OBSERVER
+#   cmakedefine01 ENABLE_FEATURE_STATE
+#   cmakedefine01 ENABLE_FEATURE_STRATEGY
+#   cmakedefine01 ENABLE_FEATURE_TEMPLATE_METHOD
+#   cmakedefine01 ENABLE_FEATURE_VISITOR
+
+#cmakedefine01 ENABLE_TARGET_CREATIONAL
+
+#cmakedefine01 ENABLE_TARGET_STRUCTURAL
+
+/* app versions */
+#define PROJECT_VERSION_MAJOR @PROJECT_VERSION_MAJOR@ // major
+#define PROJECT_VERSION_MINOR @PROJECT_VERSION_MINOR@ // minor
+#define PROJECT_VERSION_PATCH @PROJECT_VERSION_PATCH@ // patch
+#cmakedefine PROJECT_VERSION_TWEAK @PROJECT_VERSION_TWEAK@ // tweak

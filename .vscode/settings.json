@@ -1,0 +1,63 @@
+{
+    // PROJECT VARIABELS (GLOBAL)
+    // ------------------------------------------------------------------------
+
+    // COLORS
+    // ------------------------------------------------------------------------
+    "workbench.colorCustomizations": {
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveForeground": "#f8dec0",
+        "titleBar.activeBackground": "#cf4436",
+        "titleBar.inactiveBackground": "#a6362b",
+        "activityBar.activeBorder":"#202020",
+        "activityBar.foreground":"#ffffff",
+        "activityBar.inactiveForeground":"#f8dec0",
+        "activityBar.background": "#cf4436",
+        "activityBar.activeBackground": "#a6362b",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.background": "#cf4436",
+        "statusBar.border": "#202020"
+    },
+
+
+    // CMAKE
+    // ------------------------------------------------------------------------
+    "cmake.sourceDirectory": "${workspaceFolder}/",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "cmake.generator": "Unix Makefiles",
+    //"cmake.useCMakePresets": "auto",
+    "cmake.configureSettings": {
+       "CMAKE_EXPORT_COMPILE_COMMANDS":"ON",
+       "CMAKE_TOOLCHAIN_FILE":"${workspaceFolder}/cmakefiles/project_toolchain.cmake",
+       "CMAKE_BUILD_TYPE":"Debug",
+       //"CMAKE_BUILD_TYPE":"Release",
+    },
+    //"cmake.configureArgs": [
+    //   "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    //   "-DCMAKE_BUILD_TYPE=Debug",
+    //   "-DCMAKE_BUILD_TYPE=Release",
+    //],
+    //"cmake.configureOnOpen": true,
+    //"cmake.enableTraceLogging": true,
+    "cmake.automaticReconfigure": true,
+    "cmake.parallelJobs": 16,
+    "cmake.buildArgs": ["--parallel"],
+
+
+    // GIT
+    // ------------------------------------------------------------------------
+    "git.ignoreLimitWarning": true,
+
+
+    // FILES
+    // ------------------------------------------------------------------------
+    "files.associations": {
+        "**/Code/*/*.*": "c",
+        "*.c": "c",
+        "*.h": "c",
+        "*.H": "cpp",
+        "*.hpp": "cpp",
+        "*.cpp": "cpp",
+    },
+}
